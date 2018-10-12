@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=LTSpice
+Comment=
+Exec=XVIIx64 %U
+StartupNotify=true
+Terminal=false
+Type=Application
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-ms-shortcut;
+Categories=Engineering
+Keywords=LTSpice
