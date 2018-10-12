@@ -5,7 +5,7 @@ Flatpak manifest for the LTSpice App.
 http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
 
 ## Installation
-
+	Important: Don't change the install path!
 ### Platform and Sdk
     flatpak remote-add --if-not-exists winepak https://dl.winepak.org/repo/winepak.flatpakrepo
 	flatpak install winepak org.winepak.Platform/i386/3.0
