@@ -80,7 +80,7 @@ modules:
           - '    exit 1'
           - fi
           - 
-          - if [ -e "${WINEPREFIX}/dosdevices/c:/x-special/Program Files/LTC/LTspiceXVII/XVIIx64.exe" ] ; then
+          - if [ -e "${WINEPREFIX}/dosdevices/c:/Program Files/LTC/LTspiceXVII/XVIIx64.exe" ] ; then
           - '    echo "This prefix already has an exisiting ''LTSpice'' install at ${WINEPREFIX}"'
           - '    echo "In order to install ''LTSpice'' you must move or delete the current prefix."'
           - '    exit 1'
@@ -105,7 +105,7 @@ modules:
           - wine reg add 'HKEY_CURRENT_USER\Software\Wine\DllOverrides' /v shcore /d "" /f
           - 
           - echo "Installing application..."
-          - wine "${XDG_CACHE_HOME}/LTspiceXVII.exe"
+          - wine64 "${XDG_CACHE_HOME}/LTspiceXVII.exe"
           - 
           - echo "Installer finished"
       - type: script
@@ -113,7 +113,7 @@ modules:
         commands:
           - export WINEARCH=win64
           - 
-          - if ! [ -e "${WINEPREFIX}/dosdevices/c:/x-special/Program Files/LTC/LTspiceXVII/XVIIx64.exe" ] ; then
+          - if ! [ -e "${WINEPREFIX}/dosdevices/c:/Program Files/LTC/LTspiceXVII/XVIIx64.exe" ] ; then
           - '    source /app/bin/LTSpice-installer'
           - '    if [[ $? != 0 ]] ; then'
           - '        echo "Installation failed, abort."'
@@ -121,7 +121,7 @@ modules:
           - '    fi'
           - fi
           - 
-          - wine "C:/Program Files/LTC/LTspiceXVII/XVIIx64.exe"
+          - wine64 "C:/Program Files/LTC/LTspiceXVII/XVIIx64.exe"
 
       - type: file
         path: com.analog.ltspice-simulator.appdata.xml
