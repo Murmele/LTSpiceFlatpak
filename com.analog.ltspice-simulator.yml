@@ -35,6 +35,7 @@ finish-args:
   - --share=network
   - --device=dri
   - --allow=multiarch
+  - --filesystem=home
     
 modules:
   - name: setup-compat32
