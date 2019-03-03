@@ -11,7 +11,7 @@ http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simu
 	flatpak install winepak org.winepak.Platform/x86_64/3.0
 	flatpak install winepak org.winepak.Sdk/x86_64/3.0
 
-### Happy Foto
+### LTSpice
     flatpak-builder --repo=LTSpiceRepo --force-clean LTSpice com.analog.ltspice-simulator.yml
 	flatpak remote-add LTSpiceRepo LTSpiceRepo --no-gpg-verify
 	flatpak install LTSpiceRepo com.analog.ltspice-simulator
